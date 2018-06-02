@@ -11,6 +11,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import {MatDialogModule} from '@angular/material/dialog';
+import {MatSelectModule} from '@angular/material/select';
+import {MatTableModule} from '@angular/material/table';
 export const mdComponents: any = [
     MatSidenavModule,
     MatToolbarModule,
@@ -23,4 +25,6 @@ export const mdComponents: any = [
     MatButtonModule,
     MatMenuModule,
     MatSnackBarModule,
-    MatDialogModule];
+    MatDialogModule,
+    MatSelectModule,
+    MatTableModule];

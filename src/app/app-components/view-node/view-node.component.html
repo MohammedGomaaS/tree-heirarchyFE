@@ -1,3 +1,19 @@
-<p>
-  view-node works!
-</p>
+
+<table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+  <div class="body">
+    <ng-container matColumnDef="node_name">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Node Name </th>
+      <td mat-cell *matCellDef="let element"> {{element.node_name}} </td>
+    </ng-container>
+
+
+
+    <ng-container matColumnDef="parent_node">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Parent Node </th>
+      <td mat-cell *matCellDef="let element"> {{element.parent_node}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </div>
+</table>

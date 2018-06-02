@@ -1,3 +1,21 @@
-<p>
-  create-node works!
-</p>
+
+<div class="container">
+  <form class="form" novalidate [formGroup]="myform" (ngSubmit)="onSubmit()">
+    <mat-form-field class="full-width">
+      <input matInput placeholder="Node name" formControlName="node_name" required>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-select [(value)]="selectedParent" placeholder="Parent Node" formControlName="parent_id">
+        <mat-option value=' ' *ngIf="parentList.length<1">root</mat-option>
+        
+        <mat-option value="{{parent.id}}" *ngFor="let parent of parentList">{{parent.node_name}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <!-- <mat-form-field>
+      <mat-select [(value)]="selectedChild" placeholder="Child Node" formControlName="parent_id">
+        <mat-option value="{{child.id}}" *ngFor="let child of childList">{{child.node_name}}</mat-option>
+      </mat-select>
+    </mat-form-field> -->
+    <button mat-raised-button class="float-right" type="submit">Add</button>
+  </form>
+</div>
