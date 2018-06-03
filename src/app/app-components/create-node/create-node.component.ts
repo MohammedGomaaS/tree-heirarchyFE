@@ -29,7 +29,7 @@ export class CreateNodeComponent implements OnInit {
 
   getAllNodes() {
     this.treeService.getAllNodes().subscribe(result => {
-      this.parentList = result.data;
+      this.parentList = result;
     }, error => {
       this.openSnackBar("Error while loading nodes");
     });

@@ -20,7 +20,7 @@ export class ViewNodeComponent implements OnInit {
   }
   getNodeList() {
     this.treeService.getAllNodes().subscribe(result => {
-      this.processResult(result.data);
+      this.processResult(result);
     }, error => {
 
     }
